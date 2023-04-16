@@ -1,6 +1,14 @@
-import { Box, useTheme } from "@mui/material";
+import {
+  Box,
+  useTheme,
+  IconButton,
+  Grid,
+  Typography
+} from "@mui/material";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
+import InputBase from "@mui/material/InputBase";
+import SearchIcon from "@mui/icons-material/Search";
 
 const ViewStudent = () => {
   const theme = useTheme();
@@ -12,6 +20,24 @@ const ViewStudent = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="VIEW STUDENT" subtitle="Welcome to View Student Page" />
       </Box>
+
+      <Typography marginLeft="3%">Search for Student ID to proceed</Typography>
+
+      {/* SEARCH BAR and ICON BUTTON*/}
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Box
+          display="flex"
+          backgroundColor={colors.primary[400]}
+          borderRadius="3px"
+          margin="2%"
+          marginLeft="5%"
+        >
+          <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
+          <IconButton type="button" sx={{ p: 1 }}>
+            <SearchIcon />
+          </IconButton>
+        </Box>
+      </Grid>
     </Box>
   );
 };
