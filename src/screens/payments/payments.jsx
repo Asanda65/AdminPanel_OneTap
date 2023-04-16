@@ -1,18 +1,12 @@
 import { Box, useTheme, IconButton, Grid, Typography } from "@mui/material";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
-import { useNavigate } from "react-router-dom";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 
 const Payment = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const navigate = useNavigate();
-
-  const handleButtonClick = () => {
-    navigate("../viewStudent");
-  };
 
   return (
     <Box m="20px">
